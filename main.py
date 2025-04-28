@@ -4,6 +4,7 @@ from db import init_db
 from handlers import start, menu, offers, transactions, callbacks, admin
 
 def main():
+    db.init_db()
     init_db()
     updater = Updater(token=TELEGRAM_TOKEN, use_context=True)
     dp = updater.dispatcher
